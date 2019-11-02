@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script>
+
+
+        let login = function () {
+            let user = $("#user").val();
+            let pass = $("#pass").val();
+
+            if (user.trim() === "" || pass.trim() === "") {
+                alert("请输入完整的信息");
+                return;
+            }
+
+            location.href = "inex.html";
+        }
+
+
+    </script>
+</head>
+<body>
+
+
+<div class="container">
+    <div style="width: 300px;margin: 0 auto;position: absolute;top: 20%;left: 40%;">
+
+        <div class="container" style="text-align: center">
+            <img src="img/bofang.svg" id="pic" width="100px" style=" border-radius: 50px" height="100px">
+        </div>
+
+        <form id="uploadForm" method="post">
+
+            <div class="form-group">
+                <label for="user">用户</label>
+                <input type="text" class="form-control" id="user" name="user" placeholder="user">
+            </div>
+
+            <div class="form-group">
+                <label for="user">密码</label>
+                <input type="text" class="form-control" id="pass" name="pass" placeholder="user">
+            </div>
+
+            <input onclick="login()" type="button" value="登录" class="btn-info btn col-12">
+            <br><br>
+            <input type="reset" value="重置" class="btn-warning btn col-12">
+        </form>
+
+    </div>
+
+</body>
+</html>
